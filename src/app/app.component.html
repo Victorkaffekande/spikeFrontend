@@ -1,14 +1,28 @@
-<h1>Vælg en fil, den bliver inputtet i databasen med det samme</h1>
+<!-- IMAGE SAVE TESTING-->
+<h1>Vælg et billede, den bliver inputtet i databasen med det samme</h1>
 <input type="file" class="file-input"
-       (change)="onFileSelected($event)" #fileUpload>
+       (change)="onFileSelectedImage($event)">
 <img [src]="image">
 
-
 <br>
 <br>
 <br>
 
+<!-- IMAGE GET TESTING-->
 <h1>get an image by id</h1>
 <input type="number" [(ngModel)]="inputId">
 <button type="button" (click)="searchImg()">search</button>
 <img [src]="image2">
+
+<!-- PDF SAVE TESTING-->
+<h1>Vælg en pdf, den bliver inputtet i databasen med det samme</h1>
+<input type="file" class="file-input"
+       (change)="onFileSelectedPdf($event)">
+
+<br>
+<br>
+<br>
+<!-- PDF download TESTING-->
+<input type="number" [(ngModel)]="inputPDFid">
+<button (click)="downloadBtn()"> Test button</button>
+
